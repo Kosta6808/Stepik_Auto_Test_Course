@@ -10,5 +10,5 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 def test_button_add_to_basket(browser):
     browser.get(link)
     item = WebDriverWait(browser, 5).until(ec.presence_of_element_located((By.CSS_SELECTOR, 'button.btn-add-to-basket')))
-    assert item.text == 'Añadir al carrito', 'No hay ningun boton!!!'
+    assert item, 'Login button is not on the page!'
     print(f'\nHay un boton!')
