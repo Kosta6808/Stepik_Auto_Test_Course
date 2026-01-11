@@ -11,4 +11,3 @@ def test_button_add_to_basket(browser):
     browser.get(link)
     item = WebDriverWait(browser, 5).until(ec.presence_of_element_located((By.CSS_SELECTOR, 'button.btn-add-to-basket')))
     assert item, 'Login button is not on the page!'
-    print(f'\nHay un boton!')
